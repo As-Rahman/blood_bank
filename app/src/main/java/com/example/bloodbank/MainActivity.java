@@ -1,5 +1,6 @@
 package com.example.bloodbank;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
             if(username.getText().toString().equals("admin")&& password.getText().toString().equals("admin"))
             { //correct
                 Toast.makeText(MainActivity.this,"Login Successfull",Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(MainActivity.this,admin_panel.class);
+                startActivity(intent);
             }else {
                 //incorrect
                 Toast.makeText(MainActivity.this,"Login Faild!!",Toast.LENGTH_SHORT).show();
